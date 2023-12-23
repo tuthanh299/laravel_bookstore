@@ -4,23 +4,23 @@
  
 <div class="content-wrapper">
    
-    @include('partials.content-header',['name'=>'category','key'=>'Edit'])
+    @include('partials.content-header',['name'=>'Category','key'=>'Add'])
      
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 
                 <div class="col-md-6">
-                    <form action="{{route('categories.update',['id'=>$category->id])}}" method="POST"> 
+                    <form action="{{route('categories.store')}}" method="POST"> 
                         @csrf
                         <div class="form-group">
-                            <label>Tên danh mục</label>
-                            <input type="text" class="form-control" value="{{$category->name}}" name="name" placeholder="Nhập tên danh mục">
+                            <label>Tên Danh Mục</label>
+                            <input type="text" class="form-control" name="name" placeholder="Nhập tên danh mục">
                         </div>
                         <div class="form-group">
-                            <label>Chọn danh mục cha</label>
+                            <label>Chọn Danh Mục cha</label>
                             <select class="form-control" name="parent_id">
-                                <option value="0">Chọn danh mục cha</option>
+                                <option value="0">Chọn Danh Mục cha</option>
                                 {!! $htmlOption !!}
                             </select>
                         </div>

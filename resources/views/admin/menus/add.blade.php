@@ -4,24 +4,24 @@
  
 <div class="content-wrapper">
    
-    @include('partials.content-header',['name'=>'category','key'=>'Add'])
+    @include('partials.content-header',['name'=>'Menus','key'=>'Add'])
      
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 
                 <div class="col-md-6">
-                    <form action="{{route('categories.store')}}" method="POST"> 
+                    <form action="{{route('menus.store')}}" method="POST"> 
                         @csrf
                         <div class="form-group">
-                            <label>Tên danh mục</label>
-                            <input type="text" class="form-control" name="name" placeholder="Nhập tên danh mục">
+                            <label>Tên Menu</label>
+                            <input type="text" class="form-control" name="name" placeholder="Nhập tên menu">
                         </div>
                         <div class="form-group">
-                            <label>Chọn danh mục cha</label>
+                            <label>Chọn Menu Cha</label>
                             <select class="form-control" name="parent_id">
-                                <option value="0">Chọn danh mục cha</option>
-                                {!! $htmlOption !!}
+                                <option value="0">Chọn Menu Cha</option>
+                                {!! $optionSelect !!}
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>

@@ -4,24 +4,25 @@
  
 <div class="content-wrapper">
    
-    @include('partials.content-header',['name'=>'menus','key'=>'Add'])
+    @include('partials.content-header',['name'=>'Menus','key'=>'Edit'])
      
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 
                 <div class="col-md-6">
-                    <form action="{{route('menus.store')}}" method="POST"> 
+                    <form action="{{route('menus.update',['id'=> $menuIdEdit->id])}}" method="POST"> 
                         @csrf
                         <div class="form-group">
-                            <label>Tên danh mục</label>
-                            <input type="text" class="form-control" name="name" placeholder="Nhập tên danh mục">
+                            <label>Tên Menu</label>
+                            <input type="text" class="form-control" name="name" placeholder="Nhập tên menu"
+                            value="{{ $menuIdEdit->name }}">
                         </div>
                         <div class="form-group">
-                            <label>Chọn menu cha</label>https://www.youtube.com/watch?v=IJA3-z_ZhEU&list=PL3V6a6RU5ogEAKIuGjfPEJ77FGmEAQXTT&index=16
+                            <label>Chọn Menu Cha</label>
                             <select class="form-control" name="parent_id">
-                                <option value="0">Chọn danh mục cha</option>
-                                
+                                <option value="0">Chọn Menu Cha</option>
+                                {!! $optionSelect !!}
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
