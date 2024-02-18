@@ -1,1 +1,9 @@
-.select2-selection__choice{background-color: rgb(82, 82, 221) !important;}
+.select2-selection__choice{background-color:rgb(82,82,221) !important;}
+.select2-selection__rendered{line-height:1 !important;}
+.select2-selection__clear{margin-top:-7px;}
+.image-gallery,.image-core,.image-slider{width:100%;height:135px;object-fit:cover;}
+.box-gallery,.box-image{margin-top:20px;}
+.adm-product-img,.slider-image{width:150px;height:100px;object-fit:cover;}
+.alert-danger{margin-top:10px;padding:3px 5px;}
+/* Admin Select option */
+.select2-container--default .select2-dropdown .select2-search__field:focus,.select2-container--default .select2-search--inline .select2-search__field:focus{border:unset;}

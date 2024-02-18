@@ -1,5 +1,5 @@
 @extends('layouts.admin') @section('title')
-<title>Trang Chủ</title>
+<title>Thêm Menus</title>
 @endsection @section('content')
  
 <div class="content-wrapper">

@@ -1,5 +1,5 @@
 @extends('layouts.admin') @section('title')
-<title>Trang Chủ</title>
+<title>Menus</title>
 @endsection @section('content') 
 <div class="content-wrapper"> 
     @include('partials.content-header',['name'=>'Menus','key'=>'List']) 
